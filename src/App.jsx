@@ -1,7 +1,11 @@
-import "./App.css";
+import Header from "../sections/Header";
 
 function App() {
-  return <h1 class="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <main className="overflow-hidden">
+      <Header />
+    </main>
+  );
 }
 
 export default App;

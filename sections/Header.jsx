@@ -1,17 +1,41 @@
 import clsx from "clsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
 
 const NavLink = ({ title }) => (
-  <LinkScroll className="font-bold text-[16px] leading-[24px] text-p4 uppercase transition-colors duration-500 hover:text-p1 cursor-pointer max-lg:my-4 max-lg:h5">
+  <LinkScroll
+    to={title}
+    offset={-100}
+    spy
+    smooth
+    className="font-bold text-[16px] leading-[24px] text-p4 uppercase transition-colors duration-500 hover:text-p1 cursor-pointer max-lg:my-4 max-lg:h5"
+  >
     {title}
   </LinkScroll>
 );
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 32);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 z-50 w-full py-10">
+    <header
+      className={clsx(
+        "fixed top-0 left-0 z-50 w-full transition-all duration-500 max-lg:py-4",
+        isScrolled ? "py-2 bg-black-100 backdrop-blur-[8px]" : "py-10"
+      )}
+    >
       <div className="container flex items-center h-14 max-lg:px-5">
         <a className="flex-1 cursor-pointer lg:hidden z-2">
           <img src="/images/xora.svg" width={115} height={55} alt="logo" />
@@ -33,7 +57,7 @@ const Header = () => {
                 <li className="nav-logo">
                   <LinkScroll
                     to="hero"
-                    offset={-100}
+                    offset={-250}
                     spy
                     smooth
                     className={clsx(

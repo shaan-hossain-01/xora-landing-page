@@ -1,5 +1,6 @@
 import Header from "../sections/Header";
 import Hero from "../sections/Hero";
+import Pricing from "../sections/Pricing";
 import Features from "./components/Features";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Hero />
       <Features />
+      <Pricing />
     </main>
   );
 }

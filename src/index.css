@@ -146,6 +146,12 @@
 
   /* Responsive h5 class for mobile */
   @media (max-width: 1024px) {
+    .max-lg\:h4 {
+      font-size: 40px !important;
+      font-weight: 600 !important;
+      line-height: 52px !important;
+    }
+
     .max-lg\:h5 {
       font-size: 32px !important;
       font-weight: 600 !important;

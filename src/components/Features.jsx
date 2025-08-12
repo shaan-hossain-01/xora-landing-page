@@ -38,7 +38,7 @@ const Features = () => {
                     <img
                       src={icon}
                       alt={title}
-                      className="z-20 object-contain size-17/20"
+                      className="z-20 object-contain "
                     />
                   </div>
                   <h3 className="relative mx-auto my-0 text-center uppercase z-2 max-w-36 base-small ">

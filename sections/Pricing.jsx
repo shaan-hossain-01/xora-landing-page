@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import { Element } from "react-scroll";
 import { plans } from "../src/constants";
+import CountUp from "react-countup";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -81,7 +82,44 @@ const Pricing = () => {
                     "relative flex flex-col items-center",
                     index === 1 ? "pt-24" : "pt-12"
                   )}
-                ></div>
+                >
+                  <div
+                    className={clsx(
+                      "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercase",
+                      index === 1 ? "border-p3 text-p3" : "border-p1 text-p1"
+                    )}
+                  >
+                    {plan.title}
+                  </div>
+                  <div className="relative z-2 flex items-center justify-center">
+                    <div
+                      className={clsx(
+                        "h-num flex items-start",
+                        index === 1 ? "text-p3" : "text-p4"
+                      )}
+                    >
+                      {" "}
+                      $
+                      <CountUp
+                        start={plan.priceMonthly}
+                        end={monthly ? plan.priceMonthly : plan.priceYearly}
+                        duration={1}
+                        useEasing={true}
+                        preserveValue
+                      />
+                    </div>
+                    <div className="small-1 relative top-3 ml-1 uppercase">
+                      /mo
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className={clsx(
+                    "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4", index === 1 && "border-b"
+                  )}
+                >
+                  {plan.caption}
+                </div>
               </div>
             ))}
           </div>

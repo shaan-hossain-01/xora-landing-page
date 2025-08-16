@@ -1,12 +1,72 @@
-# React + Vite
+# Xora - Modern AI Video Editor Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A stunning, fully responsive landing page for Xora AI Video Editor built with React, Vite, and Tailwind CSS v4.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Design**: Dark theme with gradient backgrounds and smooth animations
+- **Fully Responsive**: Mobile-first design with adaptive layouts across all devices
+- **Interactive Components**: FAQ accordion, testimonials carousel, pricing toggle
+- **Smooth Scrolling**: Navigation with React Scroll integration
+- **Performance Optimized**: Built with Vite for fast development and optimized builds
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19** - UI library with modern hooks
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS v4** - Utility-first styling with custom design system
+- **React Scroll** - Smooth scrolling navigation
+- **React CountUp** - Animated number counters
+- **Clsx** - Conditional CSS classes
+
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 📱 Responsive Design
+
+- **Mobile-first approach** with breakpoint-specific layouts
+- **Custom responsive utilities** for complex layout requirements
+- **Flexible components** that adapt to different screen sizes
+- **Optimized typography** scaling across devices
+
+## 🎨 Design System
+
+- **Custom color palette** (p1-p5, s1-s5) for consistent theming
+- **Typography scale** with responsive font sizes
+- **Gradient backgrounds** for modern visual appeal
+- **Custom shadows and effects** for depth and dimension
+
+## 📂 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+├── constants/           # Data and configuration
+└── sections/            # Page sections (Hero, Features, etc.)
+```
+
+## 🌟 Key Sections
+
+- **Hero** - Compelling introduction with call-to-action
+- **Features** - Product highlights with interactive elements
+- **Pricing** - Flexible pricing plans with monthly/yearly toggle
+- **FAQ** - Expandable questions with smooth animations
+- **Testimonials** - Customer reviews in a responsive layout
+- **Download** - Multi-platform availability showcase
+
+---
+
+Built with ❤️ using modern web technologies
